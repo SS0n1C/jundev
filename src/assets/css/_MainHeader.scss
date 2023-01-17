@@ -1,0 +1,7 @@
+.headerField{
+    @include flex;
+    justify-content: space-between;
+    font-size: 24px;
+    background-color: red;
+    padding: 20px 15px;
+}

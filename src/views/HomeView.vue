@@ -1,17 +1,13 @@
 <template>
-  <div class="home">
    <div class="conteiner">
-    <MainHeader/>
-   </div>
+      body
+      <router-link to="/JavaScript">news</router-link>
   </div>
 </template>
 
 <script>
-import MainHeader from "@/components/MainHeader.vue";
 export default {
-  components: {
-    MainHeader,
-  }
+
 }
 </script>
 <style>

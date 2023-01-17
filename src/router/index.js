@@ -7,6 +7,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/JavaScript',
+    name: 'JavaScript',
+    component: () => import('../views/JavaScript.vue')
+  },
 ]
 
 const router = createRouter({
