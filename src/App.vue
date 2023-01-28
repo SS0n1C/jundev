@@ -4,6 +4,7 @@
       <MainHeader/>
     </header>
     <main>
+      <Registration/>
       <router-view/>
     </main>
   <footer>
@@ -14,10 +15,12 @@
 <script>
 import MainHeader from '@/components/MainHeader.vue';
 import MainFooter from "@/components/MainFooter.vue";
+import Registration from "@/components/Registration.vue";
 export default {
 components:{
   MainHeader,
   MainFooter,
+  Registration,
 }
 }
 </script>

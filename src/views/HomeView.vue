@@ -1,7 +1,6 @@
 <template>
    <div class="conteiner">
       body
-      <router-link to="/JavaScript">news</router-link>
   </div>
 </template>
 

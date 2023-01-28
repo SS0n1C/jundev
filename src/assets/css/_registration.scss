@@ -1,0 +1,53 @@
+.ModalRegistr{
+    @include flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    .registr{
+        background-color: wheat;
+        border-radius: 15px;
+        padding: 25px;
+        min-width: 300px;
+
+        & input{
+            width: 100%;
+            height: 25px;
+        }
+        &__title{
+            text-align: center;
+            @include font($Oswald,600,24px,24px,$black);
+            @include margb(20px);
+        }
+        .input__title{
+            @include margb(5px);
+            @include font($Oswald,400,18px,20px,$black);
+        }
+        .input__input{
+            @include margb(10px);
+        }
+        .registr__form--button button{
+            background-color: #0b76ef;
+            height: 30px;
+            width: 100%;
+            margin-top: 20px;
+            @include margb(10px);
+            @include font($Oswald,600,18px,24px,$black);
+        }
+        .registr__form--gmail button{
+            background-color: green;
+            height: 30px;
+            width: 100%;
+            @include font($Oswald,600,18px,24px,$black);
+        }
+        &__separator{
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin-top: 10px;
+        }
+        &__footer{
+            text-align: center;
+            @include font($Oswald,400,16px,24px,$black);
+        }
+    }
+}
