@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import JavaScript from '../views/JavaScript.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/HomeView',
     name: 'home',
     component: HomeView
   },
   {
-    path: '/JavaScript',
+    path: '/',
     name: 'JavaScript',
     component: () => import('../views/JavaScript.vue')
   },

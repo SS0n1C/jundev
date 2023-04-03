@@ -4,18 +4,30 @@
     margin-top: 50px;
 
     .registr{
-        background-color: wheat;
+        background-color: $wheat;
         border-radius: 15px;
         padding: 25px;
         min-width: 300px;
+        position: relative;
 
+        &__close{
+            position: absolute;
+            top:15px;
+            right: 15px;
+            cursor: pointer;
+
+            &--cross{
+                width: 30px;
+                height: 30px;
+            }
+        }
         & input{
             width: 100%;
             height: 25px;
         }
         &__title{
             text-align: center;
-            @include font($Oswald,600,24px,24px,$black);
+            @include font($Oswald,600,24px,24px,$mainBrown);
             @include margb(20px);
         }
         .input__title{
@@ -25,29 +37,37 @@
         .input__input{
             @include margb(10px);
         }
+
         .registr__form--button button{
-            background-color: #0b76ef;
+            background-color: $blueBtn;
             height: 30px;
             width: 100%;
             margin-top: 20px;
             @include margb(10px);
-            @include font($Oswald,600,18px,24px,$black);
+            @include font($Oswald,400,18px,24px,$mainBrown);
+            text-transform: uppercase;
         }
         .registr__form--gmail button{
-            background-color: green;
+            background-color: #0F9D58;
             height: 30px;
             width: 100%;
-            @include font($Oswald,600,18px,24px,$black);
+            @include font($Oswald,400,18px,24px,$mainBrown);
+            text-transform: uppercase;
         }
         &__separator{
             width: 100%;
             height: 1px;
-            background-color: black;
+            background-color: $mainBrown;
             margin-top: 10px;
         }
         &__footer{
             text-align: center;
-            @include font($Oswald,400,16px,24px,$black);
+            @include font($Oswald,400,16px,24px,$mainBrown);
+
+            & span{
+                color:blue;
+                cursor: pointer;
+            }
         }
     }
 }

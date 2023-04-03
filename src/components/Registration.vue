@@ -1,6 +1,11 @@
 <template>
-  <div class="ModalRegistr">
-  <div class="registr">
+  <div class="ModalRegistr" @click.stop="closs">
+  <div class="registr" @click.stop>
+    <div class="registr__close">
+        <svg class="registr__close--cross"  @click="closs">
+            <use xlink:href = "@/assets/img/sprite.svg#redCross"></use>  
+        </svg>
+    </div>
     <div class="registr__title">
         Registration
     </div>
@@ -52,15 +57,25 @@
     </div>
     <div class="registr__separator"></div>
     <div class="registr__footer">
-        Have an account? Log In
+        Have an account? <span @click="openReg">Log In</span>
     </div>
   </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
+methods:{
+    ...mapMutations(["openRegistration","clossWind"]),
+    openReg(){
+        this.openRegistration()
+    },
+    closs(){
+        this.clossWind()
+    }
 
+}
 }
 </script>
 

@@ -1,0 +1,105 @@
+.jsNews{
+    &__head{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        margin: 50px 15px 30px;
+        justify-content: end; 
+        justify-items: center;
+
+        &--title{
+            @include font($Oswald,700,38px,32px,black);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            grid-column: 2/3;
+            
+        }
+        &--search{
+            display: flex;
+            align-items: center;
+            justify-self: end;
+
+            .search__field{  
+                color: white;
+                height: 30px;
+                @include font($Oswald,400,18px,25px,$black);
+                padding:0px 5px;
+                letter-spacing: 1.5px;
+
+                & input{
+                border-radius: 5px;
+                border: 1px $blueBtn solid;
+                }
+            }
+            .search__dandruff{
+                margin-left: 5px;
+            }
+
+            & svg{
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    &__area{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 30px;
+        padding: 0px 15px;
+
+        &--item{
+            max-width: 200px;
+            min-width: 20%;
+
+            .news__sourse{
+                @include font($righteous,400,18px,20px,$blueBtn);
+                @include margb(5px);
+            }
+            .news__data{
+                @include font($righteous,400,12px,14px,$black);
+                @include margb(5px);
+                margin-top: 5px;
+            }
+            .news__title{
+                text-align: center;
+                @include font($Oswald,600,24px,18px,$mainBrown);
+                @include margb(10px);
+                text-transform: uppercase;
+            }
+            .news__discription{
+                @include font($Oswald,600,15px,18px,$black);
+            }
+            
+        }
+        &--morePost{
+            margin-top: 20px;
+            text-align: center;
+            @include font($Oswald,700,23px,20px,$blueBtn);
+            @include flex;
+            flex-direction: column;
+           
+            .morePost__txt{
+                border: 1px black solid;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                border-radius: 10px;
+
+                &:hover + .morePost__arrow{
+                    transform: translatey(5px) rotate(45deg);
+                }
+            }
+            .morePost__arrow{
+                min-width: 20px;
+                min-height: 20px;
+                border-bottom: 3px black solid;
+                border-right: 3px black solid;
+                transform: rotate(45deg);
+
+                &:hover{
+                    transform: translatey(5px) rotate(45deg);
+                }
+            }
+        }
+    }
+}

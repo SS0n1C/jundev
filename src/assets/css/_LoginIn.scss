@@ -1,0 +1,15 @@
+.loginIn{
+    @extend .ModalRegistr;
+
+    &__field{
+        @extend .registr;
+
+        &--title{
+            @extend .registr__title;
+        }
+        .log__input--title{
+            @extend .input__title;
+        }
+    }
+
+}

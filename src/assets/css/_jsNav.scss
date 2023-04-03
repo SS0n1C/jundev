@@ -1,0 +1,21 @@
+.navField{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+
+    &__item{
+        padding: 10px 25px;
+        @include font($Oswald,500,24px,26px,$black);
+        border-radius: 20px;
+        min-width: 150px;
+        text-align: center;
+        text-transform: uppercase;
+        border: 1px transparent solid;
+
+        &:hover{
+            border: 1px black solid;
+        }
+    }
+}

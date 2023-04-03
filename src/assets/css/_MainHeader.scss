@@ -3,12 +3,11 @@ img{
     height: 100%;
 }
 .headerField{
-    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 24px;
-    background-color: #2e1818e3;
+    background-color: $mainBrown;
     padding: 10px 15px;
     border-radius: 20px;
 
@@ -16,6 +15,8 @@ img{
         position: relative;
         min-height: 40px;
         min-width: 200px;
+        z-index: 100;
+        
 
         &--block{
             display: flex;
@@ -24,16 +25,32 @@ img{
             border-radius: 10px;
             padding: 5px 20px;
             position: absolute;
-            @include font($righteous,400,24px,26px,#2e1818e3);
+            @include font($righteous,400,24px,26px,$mainBrown);
+            z-index: 100;
+            width: 100%;
 
+            .course__menu{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                order: 2;
+            }
             .courseBlock__lang{
-                margin-right: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                &--item:hover{
+                    background-color: $wheat;
+                }
+
             }
-            .curseBlock__arrow{
+            .course__menu--arrow{
                 cursor: pointer;
+                margin-left: 10px;
+                max-width: 30px;
+                max-height: 25px;
+                
             }
         }
         .dropDownList{
@@ -64,7 +81,12 @@ img{
             background-color: white;
             border-radius: 10px;
             padding: 5px 20px;
-            @include font($righteous,400,20px,22px,#2e1818e3);
+            @include font($righteous,400,20px,22px,$mainBrown);
+
+            &:hover{
+                background-color: $wheat;
+                border-color: $white;
+            }
 
             &:first-of-type{
                 margin-right: 20px;
