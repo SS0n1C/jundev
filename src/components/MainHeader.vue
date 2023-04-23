@@ -2,17 +2,17 @@
     <div class="conteiner">
       <div class="headerField">
         <div class="headerField__course">
-          <div class="headerField__course--block" :class="{dropDownList: dropActive}">
+          <div class="headerField__course--block" :class="{dropDownList: getDropStatus}">
             <div class="course__menu">
-              <div class="course__menu--active" v-show="!dropActive">
-                {{ activeCourse}}
+              <div class="course__menu--active" v-show="!getDropStatus">
+                {{ getFirstLang}}
               </div>
-              <div class="course__menu--arrow" v-on:click="openAllLang" v-if="dropActive">
+              <div class="course__menu--arrow" v-on:click="openAllLang" v-if="getDropStatus">
                 <svg class="course__menu--arrow">
                   <use xlink:href = "@/assets/img/sprite.svg#arrowDown"></use>  
                 </svg>
               </div>
-              <div class="course__menu--arrow" v-on:click="openAllLang" v-if="!dropActive">
+              <div class="course__menu--arrow" v-on:click="openAllLang" v-if="!getDropStatus">
                 <svg class="course__menu--arrow">
                   <use xlink:href = "@/assets/img/sprite.svg#arrowUp"></use>  
                 </svg>
@@ -20,8 +20,8 @@
             </div>
             <div class="courseBlock__lang"> 
               <div class="courseBlock__lang--item" 
-                v-for="(allCourse, index) in course" :key = index>
-                <div v-if="dropActive"
+                v-for="(allCourse, index) in getAlllang" :key = index>
+                <div v-if="getDropStatus"
                 @click="changeLang(allCourse)">
                   {{ allCourse.name }}
                 </div>
@@ -57,30 +57,15 @@
   export default {
     data(){
       return{
-        dropActive: false,
-        curentLangId: 0,
-        course:[
-          {id: 0, name: "JavaScript"},
-          {id: 1, name: "Python"},
-          {id: 2, name: "SEO"},
-          {id: 3, name: "PM"},
-        ],
       }
     },
     computed:{
-      ...mapGetters(["getLogin"]),
-        activeCourse(){
-           return this.course[0].name
-        }
+      ...mapGetters(["getLogin","getFirstLang","getAlllang","getDropStatus"]),
   },
     methods:{
-      ...mapMutations(["openLogin","openRegistration"]),
+      ...mapMutations(["openLogin","openRegistration","openAll"]),
       openAllLang(){
-       if(this.dropActive == true){
-        this.dropActive = false
-       } else if(this.dropActive == false){
-        this.dropActive = true
-       }
+        this.openAll()
       },
       openLog(){
         this.openLogin()
@@ -89,11 +74,11 @@
         this.openRegistration()
       },
       changeLang(allCourse){
-        let findInx =  this.course.map(e => e).find(e => e == allCourse)
-        this.course.sort(function(x,y){ 
+        let findInx =  this.getAlllang.map(e => e).find(e => e == allCourse)
+        this.getAlllang.sort(function(x,y){ 
               return x == findInx ? -1 : y == findInx ? 1 : 0; 
             });
-            return this.dropActive = false
+        this.openAllLang()
       }
     }
   }
