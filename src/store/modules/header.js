@@ -57,6 +57,10 @@ mutations: {
         } else if(state.dropActive == false){
             state.dropActive = true
         }
+    },
+    clossCourseList(state){
+        state.dropActive = false
+        
     }
 
 },
