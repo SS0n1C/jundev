@@ -4,10 +4,10 @@ state: {
     login:false,
     dropActive: false,
     course:[
-      {id: 0, name: "JavaScript"},
-      {id: 1, name: "Python"},
-      {id: 2, name: "SEO"},
-      {id: 3, name: "PM"},
+      {id: 0, name: "JavaScript", path: '/'},
+      {id: 1, name: "Python",  path: '/HomeView'},
+      {id: 2, name: "SEO",  path: '/HomeView'},
+      {id: 3, name: "PM",  path: '/HomeView'},
     ],
 },
 getters: {

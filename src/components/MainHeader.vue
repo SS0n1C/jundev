@@ -23,7 +23,7 @@
                 v-for="(allCourse, index) in getAlllang" :key = index>
                 <div v-if="getDropStatus"
                 @click="changeLang(allCourse)">
-                  {{ allCourse.name }}
+                  <router-link :to="{path:allCourse.path}">{{allCourse.name}}</router-link>
                 </div>
               </div>
               
