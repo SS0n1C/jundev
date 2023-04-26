@@ -24,7 +24,9 @@
             <div class="jsCourseItem__coment">Coments: {{ schoolList.coment }}</div>
           </div>
           <div class="jsCourse__discript">
-            <div>lorem </div>
+            <div class="jsCourse__discript--title">{{ schoolList.aboutTitle }}</div>
+            <div class="jsCourse__discript--about">{{ schoolList.about }}</div>
+            <div class="jsCourse__discript--link"><i>read more</i></div>
           </div>
         </div>
       </template>

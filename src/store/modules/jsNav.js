@@ -25,11 +25,11 @@ export default{
             {id:14, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
         ],
         schoolList:[
-            {id:0, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 4, coment: 6 },
-            {id:1, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 2, coment: 4 },
-            {id:2, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2 },
-            {id:3, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2 },
-            {id:4, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2 },
+            {id:0, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 4, coment: 6, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
+            {id:1, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 2, coment: 4, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
+            {id:2, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
+            {id:3, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
+            {id:4, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
         ],  
     },
     getters: {
