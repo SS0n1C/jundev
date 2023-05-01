@@ -15,7 +15,7 @@
     </div>
     <div class="jsNews__area">
         <div class="jsNews__area--item"
-        v-for="index in this.postCount" :key="index">
+        v-for="(n, index) in this.postCount" :key="index">
             <div class="news__sourse">{{ getJsNews[index].source }}</div>
             <div class="news__img"> <img :src="getJsNews[index].img" alt=""></div>
             <div class="news__data">{{ getJsNews[index].data }}</div>
@@ -23,7 +23,7 @@
             <div class="news__discription">{{ getJsNews[index].dicript }}</div>
         </div>
     </div>
-    <div class="jsNews__area--morePost" @click="morePost">
+    <div class="jsNews__area--morePost" @click="morePost" v-if="hideShowButton">
         <div class="morePost__txt">More post</div>
         <div class="morePost__arrow"></div>
     </div>
@@ -36,6 +36,7 @@ export default {
   data(){
     return{
       postCount: 4,
+      hideShowButton: true,
     }
   },
     computed:{
@@ -43,8 +44,16 @@ export default {
     },
     methods:{
       morePost(){
-        return this.postCount += 4
-      }
+        let test = this.getJsNews.length
+        if(this.postCount +4 < test){
+          console.log(test)
+           this.postCount += 4
+        }
+        else{
+           this.postCount = test
+           this.hideShowButton = false
+        }
+      },
     }
 }
 </script>
