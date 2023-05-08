@@ -4,9 +4,9 @@
       <div class="jsNews__head--title">News</div>
       <div class="jsNews__head--search">
         <div class="search__field">
-          <input type="text" name="" id="" class="search__field">
+          <input type="text" name="" id="" class="search__field" v-model="searchText">
         </div>
-        <div class="search__dandruff">
+        <div class="search__dandruff" @click="searchInNews">
           <svg>
               <use xlink:href = "@/assets/img/sprite.svg#search"></use>  
             </svg>
@@ -37,6 +37,7 @@ export default {
     return{
       postCount: 4,
       hideShowButton: true,
+      searchText: "",
     }
   },
     computed:{
@@ -54,7 +55,17 @@ export default {
            this.hideShowButton = false
         }
       },
-    }
+      searchInNews(){
+        let i;
+        let search = 10;
+        let newArr 
+        for (i = 0; i < this.getJsNews.length; i++){
+          let element =  this.getJsNews[i].title.split(" ")
+          console.log(element.sort())
+
+    }  
+  }
+}
 }
 </script>
 
