@@ -23,7 +23,7 @@ export default{
             {id:12, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 13", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
             {id:13, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 14", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
             {id:14, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some new 15", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
-            {id:15, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 16", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
+            {id:15, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 16", dicript:"tell me ff about your days tell me about your days tell me about your days tell me about your days"},
             {id:15, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 17", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
             {id:15, source:"google.com", img: require('@/assets/img/test.png'),data:"22.22.22", title:"some news 18", dicript:"tell me about your days tell me about your days tell me about your days tell me about your days"},
         ],
