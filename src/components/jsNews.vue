@@ -56,14 +56,15 @@ export default {
         }
       },
       searchInNews(){
-        let i;
-        let search = 10;
-        let newArr 
-        for (i = 0; i < this.getJsNews.length; i++){
-          let element =  this.getJsNews[i].title.split(" ")
-          console.log(element.sort())
-
-    }  
+      let search = this.searchText
+        this.getJsNews.forEach(e => {
+          let element = e.title.split(" ")
+          let res = element.filter((item) => 
+            search.split(" ").includes(item))
+            if(res.length == search.split(" ").length){
+             console.log(e)
+            }
+        });
   }
 }
 }
