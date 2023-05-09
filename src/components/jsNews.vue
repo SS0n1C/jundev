@@ -49,7 +49,7 @@ export default {
           return this.newsSearch
         },
         set (value){
-          this.$store.commit('jsNav/newSearchText', value)
+          this.$store.commit('newSearchText', value)
         }
       }
     },
