@@ -4,7 +4,7 @@
       <div class="jsNews__head--title">News</div>
       <div class="jsNews__head--search">
         <div class="search__field">
-          <input type="text" name="" id="" class="search__field" v-model="searchText">
+          <input type="text" name="search" class="search__field" v-model="searchTexts">
         </div>
         <div class="search__dandruff" @click="searchInNews">
           <svg>
@@ -31,19 +31,30 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations, mapState} from 'vuex';
 export default {
   data(){
     return{
       postCount: 4,
       hideShowButton: true,
-      searchText: "",
     }
   },
     computed:{
       ...mapGetters(["getJsNews"]),
+      ...mapState({
+            newsSearch: state => state.jsNav.searchTexts
+        }),
+      searchTexts: {
+        get (){
+          return this.newsSearch
+        },
+        set (value){
+          this.$store.commit('jsNav/newSearchText', value)
+        }
+      }
     },
     methods:{
+      ...mapMutations(["searchPost"]),
       morePost(){
         let test = this.getJsNews.length
         if(this.postCount +4 < test){
@@ -56,15 +67,8 @@ export default {
         }
       },
       searchInNews(){
-      let search = this.searchText
-        this.getJsNews.forEach(e => {
-          let element = e.title.split(" ")
-          let res = element.filter((item) => 
-            search.split(" ").includes(item))
-            if(res.length == search.split(" ").length){
-             console.log(e)
-            }
-        });
+        this.searchPost()
+        console.log(this.$store)
   }
 }
 }
