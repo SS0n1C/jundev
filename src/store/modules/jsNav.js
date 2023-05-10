@@ -34,7 +34,7 @@ export default{
             {id:3, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
             {id:4, title:"Beetroot academy", webSite:"google.com", img: require('@/assets/img/course/beetroot.jpg'),starRaiting: 3,coment:2, aboutTitle: "Your tech career starts here.", about:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro provident voluptate dignissimos eveniet perferendis beatae laboriosam placeat nulla quos ducimus dolore, in molestiae quis nobis, minima eligendi quidem accusantium architecto."},
         ],  
-        searchTexts: "some"
+        searchTexts: ""
     },
     getters: {
         getJsNav(state){
@@ -52,13 +52,15 @@ export default{
             state.searchTexts = searchTexts
         },
         searchPost(state){
-            let search = "some news 9"
+            let search = state.searchTexts
+            console.log(state.searchTexts)
             state.jsNews.forEach(e => {
                 let element = e.title.split(" ")
                 let res = element.filter((item) => 
                   search.split(" ").includes(item))
                   if(res.length == search.split(" ").length){
                     console.log(e)
+                    state.jsNews.push(e)
                   }
               });
         }

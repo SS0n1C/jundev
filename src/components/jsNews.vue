@@ -68,7 +68,6 @@ export default {
       },
       searchInNews(){
         this.searchPost()
-        console.log(this.$store)
   }
 }
 }
