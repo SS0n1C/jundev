@@ -52,17 +52,17 @@ export default{
             state.searchTexts = searchTexts
         },
         searchPost(state){
+            let searchArr = []
             let search = state.searchTexts
-            console.log(state.searchTexts)
             state.jsNews.forEach(e => {
                 let element = e.title.split(" ")
                 let res = element.filter((item) => 
                   search.split(" ").includes(item))
                   if(res.length == search.split(" ").length){
-                    console.log(e)
-                    state.jsNews.push(e)
+                    searchArr.push(e)
                   }
               });
+              console.log(searchArr)
         }
     }
 }
