@@ -62,7 +62,8 @@ export default{
                     searchArr.push(e)
                   }
               });
-              console.log(searchArr)
+            console.log(searchArr)
+            state.jsNews.sort(searchArr)
         }
     }
 }
